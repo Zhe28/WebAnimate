@@ -12,5 +12,5 @@ export default defineConfig({
     },
   },
   build: { outDir: "../../docs/canvas" },
-  base: "/canvas/",
+  base: "/WebAnimate/canvas/",
 });
