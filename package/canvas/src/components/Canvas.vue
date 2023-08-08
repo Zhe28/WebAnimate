@@ -7,7 +7,7 @@
 </template>
 
 <script setup lang="ts">
-import { ref, onMounted, watch } from "vue";
+import { ref, onMounted, watch, setBlockTracking } from "vue";
 // 大体过程， 通过事件监听更改Canvas画布的状态，来检测是否需要进行画布的重新绘制。
 // canvasStyle属性
 const canvasStyle = ref({
@@ -94,9 +94,17 @@ onMounted(() => {
         ctx.stroke();
         ctx.closePath();
         canvasStatus.value = graphicsInfo.DRAGING;
+        // 将生成的图传递到画布上
+        canvasElement.value?.toBlob(
+          (blob) => {
+            if (blob) imgSrc.value = URL.createObjectURL(blob);
+          },
+          "image/png",
+          1
+        );
+        // imgSrc.value = canvasElement.value?.toDataURL();
       }
     });
-    imgSrc.value = canvasElement.value?.toDataURL();
   });
 
   setTimeout(() => {
