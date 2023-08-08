@@ -11,6 +11,6 @@ export default defineConfig({
       "@": fileURLToPath(new URL("./src", import.meta.url)),
     },
   },
-  build: { outDir: "../../dist/canvas" },
+  build: { outDir: "../../docs/canvas" },
   base: "/canvas/",
 });

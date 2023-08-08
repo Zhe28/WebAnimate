@@ -1,7 +1,7 @@
 <template>
   <canvas id="canvasElement" width="500" height="500" ref="canvasElement" :style="canvasStyle" />
   <div>
-    this is pacture area
+    this is picture area
     <img :src="imgSrc" alt="" width="500" height="500" />
   </div>
 </template>

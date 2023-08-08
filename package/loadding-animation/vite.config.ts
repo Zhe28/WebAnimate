@@ -6,7 +6,7 @@ export default defineConfig({
   plugins: [vue()],
   base: "/loadding/",
   build: {
-    outDir: "../../dist/loadding",
+    outDir: "../../docs/loadding",
     assetsInlineLimit: 4096000,
   },
 });

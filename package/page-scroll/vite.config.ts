@@ -6,7 +6,7 @@ export default defineConfig({
   plugins: [vue()],
   base: "/scroll/",
   build: {
-    outDir: "../../dist/scroll",
+    outDir: "../../docs/scroll",
     assetsInlineLimit: 4096000,
   },
 });
